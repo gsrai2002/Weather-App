@@ -1,0 +1,54 @@
+.temperature-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.temperature{
+    color: white;
+    font-size: 60px;
+    margin: 0;
+}
+
+.city-name{
+    color: white;
+    font-size: 40px;
+    margin: 0;
+}
+
+.extra-info{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0 20px 0;
+}
+
+.humidity, .wind-speed{
+    display: flex;
+    align-items: center;
+}
+
+.humidity-image, .wind-image{
+    height: 40px;
+}
+
+.humidity-percent, .wind-speed{
+    color: white;
+    font-size: 30px;
+    margin: 0;
+}
+
+.humidity-info, .wind-info{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.humidity-name, .wind-name{
+    color: white;
+    font-size: 15px;
+    margin: 0;
+}
