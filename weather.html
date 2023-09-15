@@ -11,8 +11,8 @@
 <body>
     <div class="card">
         <div class="search">
-            <input type="text" placeholder="Enter city name">
-            <button class="search-button"><img src="images/search.png" ></button>
+            <input type="text" placeholder="Enter city name" class="js-search">
+            <button class="search-button js-search-button"><img src="images/search.png" ></button>
         </div>
 
         <div>
@@ -20,26 +20,28 @@
         </div>
 
         <div class="temperature-info">
-            <p class="temperature">7&deg</p>
-            <p class="city-name">New york</p>
+            <p class="temperature js-temperature">7&deg</p>
+            <p class="city-name js-city-name">New york</p>
         </div>
 
         <div class="extra-info">
             <div class="humidity">
                 <img src="images/humidity.png" class="humidity-image">
                 <div class="humidity-info">
-                    <p class="humidity-percent">48%</p>
+                    <p class="humidity-percent js-humidity-percent">48%</p>
                     <p class="humidity-name">Humidity</p>
                 </div>
             </div>
             <div class="wind-speed">
                 <img src="images/wind.png" class="wind-image">
                 <div class="wind-info">
-                    <p class="wind-speed">10.29 km/h</p>
+                    <p class="wind-speed js-wind-speed">10.29 km/h</p>
                     <p class="wind-name">Wind Speed</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="weather.js"></script>
 </body>
 </html>
