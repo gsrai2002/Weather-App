@@ -4,6 +4,8 @@ const cityName = document.querySelector('.js-city-name');
 const temperature = document.querySelector('.js-temperature');
 const humidity = document.querySelector('.js-humidity-percent');
 const wind = document.querySelector('.js-wind-speed');
+const feel = document.querySelector('.js-real-feel-temp');
+const pressure = document.querySelector('.js-pressure-hPa');
 const icon = document.querySelector('.js-icon');
 
 const lastSearchedCity = localStorage.getItem('lastSearchedCity');
@@ -36,6 +38,8 @@ async function updateWeather() {
             temperature.innerHTML = `${Math.round(data.main.temp)}&degC`;
             humidity.innerHTML = `${data.main.humidity}%`;
             wind.innerHTML = `${data.wind.speed} km/h`;
+            feel.innerHTML = `${Math.round(data.main.feels_like)}&degC`;
+            pressure.innerHTML = `${data.main.pressure} hPa`;
 
             if(data.weather[0].main === 'Clouds'){
                 icon.src = 'images/clouds.png';

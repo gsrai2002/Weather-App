@@ -1,3 +1,10 @@
+.weather-condition{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
 .icon{
     height: 170px;
     margin: 10px 0;
@@ -13,6 +20,7 @@
 .temperature{
     color: white;
     font-size: 60px;
+    font-weight: 500;
     margin: 0;
 }
 
@@ -23,36 +31,38 @@
 }
 
 .extra-info{
-    display: flex;
+    display: grid;
+    grid-template-columns: 200px 200px;
     width: 80%;
     align-items: center;
     justify-content: space-between;
     margin: 30px 0 20px 0;
+    row-gap: 30px;
 }
 
-.humidity, .wind-speed{
+.humidity, .wind, .real-feel, .pressure{
     display: flex;
     align-items: center;
 }
 
-.humidity-image, .wind-image{
+.humidity-image, .wind-image, .feel-image, .pressure-image{
     height: 40px;
 }
 
-.humidity-percent, .wind-speed{
+.humidity-percent, .wind-speed, .real-feel-temp, .pressure-hPa{
     color: white;
     font-size: 30px;
     margin: 0;
 }
 
-.humidity-info, .wind-info{
+.humidity-info, .wind-info, .real-feel-info, .pressure-info{
     display: flex;
     align-items: center;
     flex-direction: column;
     margin-left: 10px;
 }
 
-.humidity-name, .wind-name{
+.humidity-name, .wind-name, .real-feel-name, .pressure-name{
     color: white;
     font-size: 15px;
     margin: 0;

@@ -1,0 +1,41 @@
+.forecast{
+    width: 450px;
+    background-image: linear-gradient(115.64878265215202deg, rgba(243, 72, 104,10) 32.810546875%,rgba(237, 67, 113,10) 35.22737630208333%,rgba(158, 0, 236,1.0400890868596893) 70.232421875%,rgba(158, 0, 236,1) 70.232421875%);
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    border-radius: 10px;
+    padding-bottom: 30px;
+}
+
+.forecast-heading{
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.forecast-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.forecast-info div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 85%;
+    row-gap: 20px;
+    border-bottom: 1px solid white;
+}
+
+.forecast-day, .forecast-temperature{
+    color: white;
+    font-size: 20px;
+}
+
+.forecast-icon{
+    height: 60px;
+}
