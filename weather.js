@@ -1,3 +1,5 @@
+import {updateForecast} from './forecast.js';
+
 const searchButton = document.querySelector('.js-search-button');
 const searchInput = document.querySelector('.js-search');
 const cityName = document.querySelector('.js-city-name');
@@ -12,16 +14,19 @@ const lastSearchedCity = localStorage.getItem('lastSearchedCity');
 if(lastSearchedCity){
     searchInput.value = lastSearchedCity;
     updateWeather();
+    updateForecast();
 }
 
 document.body.addEventListener('keydown', (event) =>{
     if(event.key === 'Enter'){
         updateWeather();
+        updateForecast();
     }
 });
 
 searchButton.addEventListener('click', () =>{
     updateWeather();
+    updateForecast();
 });
 
 async function updateWeather() {
@@ -32,44 +37,18 @@ async function updateWeather() {
             localStorage.setItem('lastSearchedCity', city);
 
             const data = await getWeather(city);
-            console.log(data);
+            // console.log(data);
 
             cityName.innerHTML = data.name;
             temperature.innerHTML = `${Math.round(data.main.temp)}&degC`;
             humidity.innerHTML = `${data.main.humidity}%`;
-            wind.innerHTML = `${data.wind.speed} km/h`;
+            wind.innerHTML = `${(data.wind.speed).toFixed(1)} km/h`;
             feel.innerHTML = `${Math.round(data.main.feels_like)}&degC`;
             pressure.innerHTML = `${data.main.pressure} hPa`;
 
-            if(data.weather[0].main === 'Clouds'){
-                icon.src = 'images/clouds.png';
-            }
-            else if(data.weather[0].main === 'Clear'){
-                icon.src = 'images/clear.png';
-            }
-            else if(data.weather[0].main === 'Drizzle'){
-                icon.src = 'images/drizzle.png';
-            }
-            else if(data.weather[0].main === 'Mist'){
-                icon.src = 'images/mist.png';
-            }
-            else if(data.weather[0].main === 'Rain'){
-                icon.src = 'images/rain.png';
-            }
-            else if(data.weather[0].main === 'Snow'){
-                icon.src = 'images/snow.png';
-            }
-            else if(data.weather[0].main === 'Thunderstorm'){
-                icon.src = 'images/thunderstorm.png';
-            }
-            else if(data.weather[0].main === 'Haze'){
-                icon.src = 'images/haze.png';
-            }
-            else if(data.weather[0].main === 'Fog' || 'Smoke' || 'Dust' || 'Sand' || 'Ash' || 'Squall' || 'Tornado'){
-                icon.src = 'images/fog.png';
-            }
+            icon.src = iconImage(data);
             
-            
+            searchInput.value = '';
         } catch(error){
             console.error("Error fetching weather data:", error);
 
@@ -93,4 +72,34 @@ async function getWeather(city){
 
     const data = await response.json();
     return data;
+}
+
+export function iconImage(data){
+    if(data.weather[0].main === 'Clouds'){
+        return 'images/clouds.png';
+    }
+    else if(data.weather[0].main === 'Clear'){
+        return 'images/clear.png';
+    }
+    else if(data.weather[0].main === 'Drizzle'){
+        return 'images/drizzle.png';
+    }
+    else if(data.weather[0].main === 'Mist'){
+        return 'images/mist.png';
+    }
+    else if(data.weather[0].main === 'Rain'){
+        return 'images/rain.png';
+    }
+    else if(data.weather[0].main === 'Snow'){
+        return 'images/snow.png';
+    }
+    else if(data.weather[0].main === 'Thunderstorm'){
+        return 'images/thunderstorm.png';
+    }
+    else if(data.weather[0].main === 'Haze'){
+        return 'images/haze.png';
+    }
+    else if(data.weather[0].main === 'Fog' || 'Smoke' || 'Dust' || 'Sand' || 'Ash' || 'Squall' || 'Tornado'){
+        return 'images/fog.png';
+    }
 }
