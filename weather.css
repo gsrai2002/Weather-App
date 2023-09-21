@@ -1,5 +1,10 @@
 body{
+    margin: 0;
+    padding: 0;
     background-image: url('triangles.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -52,4 +57,16 @@ body{
 
 .search-button img{
     height: 15px;
+}
+
+@media screen and (max-width: 600px){
+    .card{
+        width: 550px;
+        margin: auto;
+    }
+
+    .search input{
+        width: 80%;
+    }
+
 }

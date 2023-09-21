@@ -14,6 +14,7 @@ export async function updateForecast(){
 
             for(let i=0 ; i< 40 ; i=i+8){
                 const dayData = data.list[i];
+                //* 1000 because to convert it in millisecond
                 const date = new Date(dayData.dt * 1000);
                 let day;
                 
@@ -34,7 +35,6 @@ export async function updateForecast(){
                         <p class="forecast-temperature">${temperature}&degC</p>
                     </div>
                 `;
-                console.log(day);
             }
 
             document.querySelector('.js-forecast-info').innerHTML = forecastData;

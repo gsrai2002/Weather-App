@@ -6,6 +6,7 @@
     top: 60px;
     border-radius: 10px;
     padding-bottom: 30px;
+    padding-top: 10px;
 }
 
 .forecast-heading{
@@ -42,4 +43,16 @@
 
 .forecast-icon{
     height: 60px;
+}
+
+@media screen and (max-width: 600px){
+    .forecast{
+        position: relative;
+        width: 550px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: -30px auto;
+        left: 3px;
+    }
 }
