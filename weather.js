@@ -10,7 +10,7 @@ const feel = document.querySelector('.js-real-feel-temp');
 const pressure = document.querySelector('.js-pressure-hPa');
 const icon = document.querySelector('.js-icon');
 
-const lastSearchedCity = localStorage.getItem('lastSearchedCity');
+const lastSearchedCity = localStorage.getItem('lastSearchedCity') || "London";
 if(lastSearchedCity){
     searchInput.value = lastSearchedCity;
     updateWeather();
