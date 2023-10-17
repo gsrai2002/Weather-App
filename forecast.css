@@ -1,12 +1,10 @@
 .forecast{
     width: 450px;
     background-image: linear-gradient(115.64878265215202deg, rgba(243, 72, 104,10) 32.810546875%,rgba(237, 67, 113,10) 35.22737630208333%,rgba(158, 0, 236,1.0400890868596893) 70.232421875%,rgba(158, 0, 236,1) 70.232421875%);
-    position: absolute;
-    right: 20px;
-    top: 60px;
     border-radius: 10px;
     padding-bottom: 30px;
     padding-top: 10px;
+    margin: 60px 10px;
 }
 
 .forecast-heading{
@@ -45,14 +43,51 @@
     height: 60px;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 912px){
     .forecast{
-        position: relative;
+        width: 700px;
+        margin: 0px 10px 20px 10px;
+    }
+}
+
+@media screen and (max-width: 730px){
+    .forecast{
+        width: 630px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .forecast{
         width: 550px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        margin: -30px auto;
-        left: 3px;
+    }
+}
+
+@media screen and (max-width: 570px){
+    .forecast{
+        width: 490px;
+    }
+}
+
+@media screen and (max-width: 510px){
+    .forecast{
+        width: 430px;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .forecast{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .forecast{
+        width: 380px;
+    }
+}
+
+@media screen and (max-width: 395px){
+    .forecast{
+        width: 350px;
     }
 }

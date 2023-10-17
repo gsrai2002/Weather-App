@@ -68,3 +68,60 @@
     font-size: 15px;
     margin: 0;
 }
+
+@media screen and (max-width: 570px){
+    .city-name{
+        font-size: 35px;
+    }
+    .temperature{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 510px){
+    .city-name{
+        font-size: 30px;
+    }
+    .temperature{
+        font-size: 45px;
+    }
+    .icon{
+        height: 150px;
+    }
+    .humidity-image, .wind-image, .feel-image, .pressure-image{
+        height: 35px;
+    }
+    .humidity-percent, .wind-speed, .real-feel-temp, .pressure-hPa{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .city-name{
+        font-size: 25px;
+    }
+    .temperature{
+        font-size: 44px;
+    }
+    .icon{
+        height: 130px;
+    }
+    .extra-info{
+        grid-template-columns: 180px 180px;
+    }
+}
+
+@media screen and (max-width: 395px){
+    .extra-info{
+        grid-template-columns: 190px;
+        justify-content: center;
+    }
+    .humidity-image, .wind-image, .feel-image, .pressure-image{
+        height: 40px;
+    }
+    .humidity-percent, .wind-speed, .real-feel-temp, .pressure-hPa{
+        color: white;
+        font-size: 30px;
+        margin: 0;
+    }
+}

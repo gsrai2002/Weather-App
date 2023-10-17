@@ -57,6 +57,7 @@ async function updateWeather() {
             humidity.innerHTML = '';
             wind.innerHTML = ``;
             icon.src = ``;
+            searchInput.value = '';
         }
     }
 }
